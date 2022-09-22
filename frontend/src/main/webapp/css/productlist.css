@@ -1,0 +1,63 @@
+@charset "UTF-8";
+* {
+	box-sizing:border-box;
+}
+
+/* width <= 480px 1행당 1장
+width <= 960px 1행당 2장
+width > 960px 1행당 3장   */
+div.productlist>div.table {
+	width: 95%;
+	border: 2px solid;
+}
+
+div.productlist>div.table>div.td>ul {
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+div.productlist>div.table>div.td {
+	width: 30%;
+	display: inline-block;
+	border: 1px solid;
+}
+
+div.productlist>div.table div.td>ul img {
+	width: 80%;
+	max-width: 300px;
+	margin: 0 10px;
+}
+
+@media screen and (max-width: 960px) {
+	div.productlist>div.table div.td{
+		width:50%;
+		margin:-2px;
+	}
+}
+@media screen and (max-width: 480px) {
+	div.productlist>div.table div.td{
+		width:100%;
+		margin:-2px;
+	}
+}
+
+/* div.productlist>table {
+	width:300px;
+	
+}
+div.productlist>table, div.productlist>table td {
+	border:1px solid;
+	border-collapse:collapse;
+}
+div.productlist>table td {
+	width:100px;
+}
+div.productlist>table td>ul img {
+	width:80%;
+	margin:0 10px;
+}
+>는 자식태그, blank는 후손태그를 의미
+div.productlist>table tr>td>ul {
+	list-style-type:none;
+	padding-left:0px;
+} */

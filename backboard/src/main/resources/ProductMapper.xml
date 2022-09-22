@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.mapper.ProductMapper">
+	<insert
+		id="insert"
+		parameterType="Product">
+		INSERT INTO product (product_no, product_name,
+		product_price, product_info,
+		product_mfd) VALUES (#{productNo} ,
+		#{productName} , #{productPrice} , #{productInfo} , #{productMfd}
+		)
+	</insert>
+	<update
+		id="update"
+		parameterType="Product">
+		UPDATE product set product_no = #{productNo},
+		product_name =
+		#{productName},
+		product_price = #{productPrice},
+		product_info = #{productInfo},
+		product_mfd = #{productMfd} WHERE
+		product_no = #{productNo}
+	</update>
+	<select
+		id="selectAll"
+		resultType="Product">
+		SELECT * FROM product ORDER BY product_no ASC
+	</select>
+	<select
+		id="selectByProductNo"
+		parameterType="String"
+		resultType="Product">
+		SELECT * FROM product WHERE product_no = #{productNo}
+	</select>
+	<select
+		id="selectByProductNoOrName"
+		parameterType="String"
+		resultType="Product">
+		SELECT * FROM product WHERE product_no LIKE '%${value}%'
+		OR product_name LIKE '%${value}%' ORDER BY product_no ASC
+	</select>
+</mapper>

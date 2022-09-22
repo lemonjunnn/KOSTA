@@ -1,0 +1,16 @@
+@charset "UTF-8";
+div.table {
+	width: 95%;
+	border: 2px solid;
+}
+
+div.table>div.td>ul {
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+div.table>div.td {
+	width: 30%;
+	display: inline-block;
+	border: 1px solid;
+}

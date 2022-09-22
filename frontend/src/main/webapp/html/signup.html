@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Sign Up</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../jq/init.js"></script>
+    <script src="../jq/signup.js"></script>
+  </head>
+  <body>
+    <h1>고객가입</h1>
+    <form class="signup" action="/backend/signup.html" method="post">
+      <!-- post방식으로 전송 -->
+      <label id="id">아이디:&nbsp;</label>
+      <input type="text" id="id" name="id" size="20%" required="required" />
+      <input type="button" value="아이디중복확인" /> <br />
+      <label id="pwd">비밀번호:&nbsp;</label>
+      <input
+        type="password"
+        id="pwd"
+        name="pwd"
+        size="20%"
+        required="required"
+      /><br />
+      <label id="confirm_pwd">비밀번호확인:&nbsp;</label>
+      <input
+        type="password"
+        class="confirm"
+        id="confirm_pwd"
+        size="20%"
+        required="required"
+      /><br />
+      <label id="name">이름:&nbsp;</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        size="20%"
+        required="required"
+      /><br />
+      <label id="address">주소:&nbsp;</label>
+      <input
+        type="text"
+        id="address"
+        size="5"
+        required="required"
+        readonly="readonly"
+      />
+      <input type="button" value="우편번호찾기" /><br />
+      <input
+        type="text"
+        size="5"
+        required="required"
+        readonly="readonly"
+      /><br />
+      <input type="text" name="addr" size="5" required="required" /><br />
+      <input type="hidden" name="buildingno" value="1" />
+      <!-- 우편번호용 input tag -->
+      <input type="submit" value="가입" />
+      <input type="reset" value="CLEAR" />
+    </form>
+  </body>
+</html>

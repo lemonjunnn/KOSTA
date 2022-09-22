@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Login</title>
+    <style>
+      .login {
+        margin-top: 2%;
+        margin-left: 2%;
+        padding: 2%;
+        background-color: gray;
+      }
+      #space {
+        margin-right: 35%;
+      }
+      a {
+        text-decoration-line: none; /* a hef 에서 밑줄 없애기 */
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../jq/init.js"></script>
+    <script src="../jq/login.js"></script>
+  </head>
+  <body>
+    <form class="login" action="/backend/jsp/login.jsp" method="post">
+      <!-- post방식으로 전송 -->
+      <fieldset>
+        <label id="id"
+          >아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input
+          type="text"
+          id="id"
+          name="id"
+          size="100%"
+          placeholder="ID를 입력하세요"
+          required="required"
+        /><br /><br />
+        <label id="password"
+          >비밀번호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="pwd"
+          size="100%"
+          placeholder="비밀번호를 입력하세요"
+          required="required"
+        /><br /><br />
+        <input id="space" type="submit" value="로그인" />
+        <a href="searchid.html">아이디찾기</a>
+        <a href="searchpwd.html">비밀번호찾기</a>
+        <input type="checkbox" checked="checked" />아이디저장
+      </fieldset>
+    </form>
+  </body>
+</html>

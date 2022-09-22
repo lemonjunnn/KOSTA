@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="../css/css_layout.css" />
+    <link rel="stylesheet" href="../css/viewproduct.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../jq/init.js"></script>
+    <script src="../jq/layout.js"></script>
+    <script src="../jq/viewproduct.js"></script>
+    <title>viewproduct</title>
+  </head>
+  <body>
+    <header>
+      <!--머리말-->
+      <!--  <h1>스타벅스</h1> -->
+      <!--제목-->
+      <!--로고이미지-->
+      <a id="logo" href="css_js_layout.html">
+        <img
+          src="../images/starbucks_logo.png"
+          alt="starbucks logo"
+          width="64"
+          height="64"
+        />
+      </a>
+      <nav>
+        <!--메뉴-->
+      </nav>
+    </header>
+
+    <section>
+      <!--본문-->
+
+      <article>
+        <div class="viewproduct">
+          <img src="" alt="" />
+          <div class="detail">
+            <form action="../jq/viewproduct.js">
+              <ul>
+                <li>상품번호 : <span class="product_no"></span></li>
+                <li>상품이름 : <span class="product_name"></span></li>
+                <li>가격 : <span class="product_price"></span></li>
+                <li>상품상세 : <span class="product_info"></span></li>
+                <li>제조일자 : <span class="product_mfd"></span></li>
+                <li>
+                  수량 :
+                  <input
+                    type="number"
+                    name="quantity"
+                    value="1"
+                    min="1"
+                    max="9"
+                  />
+                </li>
+                <li>
+                  <button class="shopping_basket" type="submit">
+                    장바구니에 넣기
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="result" style="display: none">
+            <button class="productlist">상품목록</button>
+            <button class="viewcart">장바구니 보기</button>
+          </div>
+        </div>
+      </article>
+      <article>
+        <span class="article_content">본문내용2</span>
+      </article>
+    </section>
+    <aside id="ad">
+      광고1, 광고2
+      <div>
+        <a href="">
+          <img
+            src="https://image.istarbucks.co.kr/upload/banner/floatingbnr/1iqO76_20211115094854583.png"
+            alt="2021년 2차 바리스타 공개채용"
+            class="pc-badge"
+          />
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img
+            src="https://image.istarbucks.co.kr/upload/banner/floatingbnr/1B4Upb_20211029180059437.png"
+            alt="PLCC 스타벅스 현대카드 11월 프로모션"
+            class="pc-badge"
+          />
+        </a>
+      </div>
+    </aside>
+    <footer>
+      <!--맺음말-->
+      <div>
+        <a class="c_00b050" href="">개인정보처리방침</a><br /><br /><br />
+        사업자등록번호 : XXXX (주)코스타벅스커피 코리아 대표이사 : 오문정 TEL :
+        1522-1234
+        <address>test@kosta.com</address>
+        <br /><br /><br />
+        <span class="en"
+          >ⓒ 2021 Starbucks Coffee Company. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
